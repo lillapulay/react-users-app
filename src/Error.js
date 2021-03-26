@@ -1,11 +1,15 @@
 import { Link } from 'react-router-dom';
+import Button from 'react-bootstrap/Button';
+import Card from 'react-bootstrap/Card';
 
 export default function Error () {
     return (
-        <div className="errorpage">
-            <h1> Nothing to see here </h1>
-            <p> Something went wrong.</p>
-            <button><Link to="/">Back</Link></button>
-        </div>
+
+            <Card className="errorCard">
+              <Card.Body>
+                <Card.Title className="errorTitle">This is not the page you're looking for...</Card.Title>
+                <Link to="/"><Button variant="info">Back</Button></Link>
+              </Card.Body>
+            </Card>
     )
 }

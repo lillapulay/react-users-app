@@ -52,6 +52,7 @@ h1 {
   color: #fff;
   padding-bottom: 20px;
   opacity: 0.9;
+  text-shadow: 1px 1px 2px whitesmoke;
 }
 
 .userCards {
@@ -115,6 +116,21 @@ div.col {
   width: 100%;
 }
 
+::-webkit-scrollbar {
+  width: 15px;
+  height: 0px;
+}
+::-webkit-scrollbar-track {
+  background: rgb(43, 126, 126);
+}
+::-webkit-scrollbar-thumb {
+  background: rgb(35, 88, 88);
+  border-radius: 20px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: rgba(13, 56, 56, 0.712);  
+}
+
 /* DETAILS CARD */
 div.detailsCard {
   width: 70%;
@@ -128,7 +144,6 @@ div.card-header {
   background-color: rgb(43, 126, 126);
   color: #fff;
   padding-top: 20px;
-  border-radius: 50%;
 }
 
 div.card-footer {
@@ -137,7 +152,32 @@ div.card-footer {
   padding-bottom: 15px;
 }
 
-.backButton {
+.btn.btn-light {
   background-color: #fff;
-  color: black;
+  color: rgb(43, 126, 126);
+  padding: 15px 25px;
+  border-radius: 1px 20px;
+  border: none;
+  box-shadow: none;
+}
+
+.btn a,
+.btn a:hover,
+.btn a:active {
+  color: rgb(43, 126, 126);
+}
+
+div.errorCard {
+  margin: auto;
+  margin-top: 150px;
+  text-align: center;
+  max-width: 30rem;
+  padding: 20px;
+  opacity: 0.9;
+  border-radius: 1px 50px;
+}
+
+div.errorTitle {
+  margin-top: 30px;
+  margin-bottom: 50px;
 }
