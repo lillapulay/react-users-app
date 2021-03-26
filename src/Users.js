@@ -1,5 +1,4 @@
 import { useState, useEffect } from "react";
-import UserDetails from './UserDetails.js';
 import { Link } from 'react-router-dom';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import Button from 'react-bootstrap/Button';
@@ -13,26 +12,37 @@ export default function Users() {
 
   useEffect(() => {
     fetch(url)
-      .then((response) => response.json())
-      .then((data) => setUser(data));
-      //console.log(user);
+      .then((response) => {
+        if (response.ok) {
+          return response.json()
+        } else {
+          throw new Error('404')
+        }
+        })
+      .then((data) => setUser(data))
+      .catch((error) => {
+        window.location.assign('/404')
+      })
   }, []);
 
 
   return (
-      <Row className="UserCards">
+    <div className="userCards">      
+      <h1> Our Users </h1>
+      <Row >
         {user.map((user) => (
-        <Col key={user.id} xs={12} s={6} md={4} lg={4} xl={3}>
-            <Card style={{ width: '18rem' }}>
-              <Card.Img variant="top" src="holder.js/100px180" />
+        <Col key={user.id}>
+            <Card className="userCard" style={{ width: '18rem' }}>
+              <div className="userMono">{user.name[0]}</div> {/* Stole the idea from Karol */}
               <Card.Body>
                 <Card.Title>{user.name}</Card.Title>
-                <Card.Text>{user.email}</Card.Text>
-                <Button variant="primary"><Link to={`/userdetails/${user.id}`}>{user.name}</Link></Button>
+                <Card.Text><i>@{user.username}</i></Card.Text>
+                <Link to={`/userdetails/${user.id}`}><Button variant="info">{user.name}</Button></Link>
               </Card.Body>
             </Card>
         </Col>
         ))}   
       </Row>
+    </div>
   );
 }

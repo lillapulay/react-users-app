@@ -1,38 +1,143 @@
-.App {
-  text-align: center;
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+#root {
+  position: relative;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  height: 100%;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+/* If it works, it works, right? */
+html, body {
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  background-image: url("./bg.jpg");
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-size: cover;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
+.nav {
+  background-color: rgba(29, 100, 100, 0.651);
+  height: 50px;
+  padding: 10px;
+  position: fixed;
+  width: 100%;
+  top: 0;
+  z-index: 100;
+}
+
+.nav a {
+  margin-left: 20px;
+  color: #fff;
+  font-size: 18px;
+  font-weight: 500;
+}
+
+.nav a:hover,
+.nav a:active {
   color: white;
 }
 
-.App-link {
-  color: #61dafb;
+h1 {
+  color: #fff;
+  padding-bottom: 20px;
+  opacity: 0.9;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.userCards {
+  position: absolute;
+  padding-top: 70px;
+  padding-bottom: 30px;
+  text-align: center;
+}
+
+div.userCard {
+  background-color: #fff;
+  margin-top: 5vh;
+  padding: 20px 10px;
+  margin: auto;
+  opacity: 0.9;
+  border-radius: 1px 50px;
+}
+
+.userMono {
+  font-size: 40px;
+  background-color: rgb(29, 100, 100);
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  margin: auto;
+  color: white;
+  padding: 20px 0px;
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+div.col {
+  margin: 0;
+  margin-bottom: 2.5em;
+}
+
+.btn.btn-info {
+  background-color:rgb(43, 126, 126);
+  color: white;
+  padding: 15px 25px;
+  border-radius: 1px 20px;
+  border: none;
+  box-shadow: none;
+}
+
+.btn:hover {
+  background-color: rgb(43, 126, 126);
+}
+
+.btn:active {
+  background-color: rgb(25, 66, 66);
+}
+
+.btn a,
+.btn a:hover,
+.btn a:active {
+  color:#fff;
+}
+
+.row {
+  width: 100%;
+}
+
+/* DETAILS CARD */
+div.detailsCard {
+  width: 70%;
+  margin: auto;
+  margin-top: 100px;
+  opacity: 0.9;
+  border: none;
+}
+
+div.card-header {
+  background-color: rgb(43, 126, 126);
+  color: #fff;
+  padding-top: 20px;
+  border-radius: 50%;
+}
+
+div.card-footer {
+  background-color: rgb(43, 126, 126);
+  color: #fff;
+  padding-bottom: 15px;
+}
+
+.backButton {
+  background-color: #fff;
+  color: black;
 }
