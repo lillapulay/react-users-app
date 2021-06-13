@@ -1,4 +1,7 @@
+![Demo image](Demo.PNG)
+
 ## React assignment
+
 
 Basic React app created by create-react-app, utilizing React Router (for user details page), fetching data from an [external API (users)](https://jsonplaceholder.typicode.com/). 
 
