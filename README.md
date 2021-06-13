@@ -8,8 +8,9 @@ Basic React app created by create-react-app, utilizing React Router (for user de
 ### To-do:
 - [ ] Fix background flicker
 - [ ] Touch up user details page
-- [ ] Clean up unused files
+- [x] Clean up unused files
 - [ ] Double-check error handling
+- [ ] Re-host (currently based on old repo)
 
 
 
