@@ -1,5 +1,18 @@
 ## React assignment
 
+Basic React app created by create-react-app, utilizing React Router (for user details page), fetching data from an [external API (users)](https://jsonplaceholder.typicode.com/). 
+
+### To-do:
+- [ ] Fix background flicker
+- [ ] Touch up user details page
+- [ ] Clean up unused files
+- [ ] Double-check error handling
+
+
+
+See this Integrify assignment's details below.
+***
+
 ### Assignment Overview
 
 The purpose of this assignment is to evaluate the candidate's understanding of basic react concepts. The main reason for using React lies in the ability to create components based on functionality set, i.e. to divide the whole app into small independent parts (components). In this assignment you will be using jsonplaceholder Api to get the users data and display it in a meaningful way.
